@@ -17,4 +17,3 @@ class QuizStates(StatesGroup):
 
 class Q3(StatesGroup):
     add = State()
-

@@ -3,7 +3,7 @@ from aiogram.dispatcher.middlewares import BaseMiddleware
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.handler import CancelHandler
-from states.user import GeneralStates, UserDataEnum
+from states.user import GeneralStates, UserDataConsts
 from middlewares import _
 
 
@@ -13,6 +13,6 @@ class CheckFinish(BaseMiddleware):
         c_state = await state.get_state()
         context = await state.get_data()
         if c_state == GeneralStates.finished.state:
-            await message.answer(_('finished', locale=context[UserDataEnum.LANG]))
+            await message.answer(_('finished', locale=context[UserDataConsts.LANG]))
             raise CancelHandler
         return

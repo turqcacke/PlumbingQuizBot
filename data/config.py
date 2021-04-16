@@ -34,7 +34,5 @@ database_info = {
 mongo = {
     'host': ip['mongo'],
     'db_name': 'bot',
-    'username': 'bot',
-    'password': 'password',
     'port': 27017
 }

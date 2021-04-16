@@ -1,20 +1,20 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
-from states.user import UserDataEnum, QuizStates
+from states.user import UserDataConsts, QuizStates
 from middlewares import _
 from keyboards.default import generate_confirm
 
 
-def invalid_type(message: types.Message, state: FSMContext):
+async def invalid_type(message: types.Message, state: FSMContext):
     data = await state.get_data()
-    message.answer(_('invalid type', locale=data[UserDataEnum.LANG]))
+    await message.answer(_('invalid type', locale=data[UserDataConsts.LANG]))
 
 
-def q1_handler(message: types.Message, state: FSMContext):
+async def q1_handler(message: types.Message, state: FSMContext):
     q1_ans = message.text
     async with state.proxy() as data:
-        data.update({UserDataEnum.Q1: message.text})
-        data.update({UserDataEnum.LAST_QUESTION: QuizStates.q1})
+        data.update({UserDataConsts.Q1: message.text})
+        data.update({UserDataConsts.LAST_QUESTION: QuizStates.q1.state})
     await message.answer(_('q1',
-                           locale=data[UserDataEnum.LANG]) + '\n' + _('confirm answer {answer}').format(answer=q1_ans),
-                         reply_markup=generate_confirm(lang=data[UserDataEnum.LANG]))
+                           locale=data[UserDataConsts.LANG]) + '\n' + _('confirm answer {answer}').format(answer=q1_ans),
+                         reply_markup=generate_confirm(lang=data[UserDataConsts.LANG]))
