@@ -1,6 +1,6 @@
 from aiogram import types
 from utils.misc import rate_limit
-from .. import Commands
+from handlers import Commands
 
 
 @rate_limit(5, Commands.help)

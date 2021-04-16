@@ -2,14 +2,14 @@ from typing import List, Tuple
 import aiojobs as aiojobs
 from aiogram import Bot, Dispatcher, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from aiogram.contrib.fsm_storage.redis import RedisStorage2
+from aiogram.contrib.fsm_storage.mongo import MongoStorage
 from aiogram.types import ParseMode
 from aiohttp import web
 from loguru import logger
 from data import config
 
 BOT = Bot(config.BOT_TOKEN, parse_mode=ParseMode.HTML, validate_token=True)
-STORAGE = MemoryStorage() if not config.USE_REDIS else RedisStorage2(**config.redis)
+STORAGE = MemoryStorage() if not config.USE_MONGO else MongoStorage(**config.mongo)
 DP = Dispatcher(BOT, storage=MemoryStorage())
 
 

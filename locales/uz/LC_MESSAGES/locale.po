@@ -1,0 +1,96 @@
+# Uzbek translations for PlumbingQuizBot.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PlumbingQuizBot
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PlumbingQuizBot final\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-04-16 12:11+0500\n"
+"PO-Revision-Date: 2021-04-16 15:56+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: uz\n"
+"Language-Team: uz <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+msgid "greetings"
+msgstr ""
+
+msgid "help"
+msgstr ""
+
+msgid "language {lang}"
+msgstr ""
+
+msgid "started"
+msgstr ""
+
+msgid "answer written"
+msgstr ""
+
+msgid "confirm answer {answer}"
+msgstr ""
+
+msgid "confirm"
+msgstr ""
+
+msgid "back"
+msgstr ""
+
+msgid "finished"
+msgstr ""
+
+msgid "q1"
+msgstr ""
+
+msgid "q2"
+msgstr ""
+
+msgid "q2a1"
+msgstr ""
+
+msgid "q2a2"
+msgstr ""
+
+msgid "q2a3"
+msgstr ""
+
+msgid "q3"
+msgstr ""
+
+msgid "q3a1"
+msgstr ""
+
+msgid "q3a2"
+msgstr ""
+
+msgid "q3a3"
+msgstr ""
+
+msgid "q3a4"
+msgstr ""
+
+msgid "q3a5"
+msgstr ""
+
+msgid "q4"
+msgstr ""
+
+msgid "q5"
+msgstr ""
+
+msgid "invalid length {max_length}"
+msgstr ""
+
+msgid "invalid input"
+msgstr ""
+
+msgid "invalid type"
+msgstr ""
+
