@@ -24,4 +24,4 @@ async def language_choose(message: types.Message, state: FSMContext):
     await QuizStates.q1.set()
     await state.update_data({UserDataEnum.LAST_STATE: QuizStates.q1})
 
-    await message.answer(_('q1'), reply_markup=generate_q2_answers(lang=lang))
+    await message.answer(_('q1'))

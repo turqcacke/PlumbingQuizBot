@@ -5,12 +5,12 @@ from middlewares import _
 from keyboards.default import generate_confirm
 
 
-def invalid_type(message: types.Message, state: FSMContext):
+async def invalid_type(message: types.Message, state: FSMContext):
     data = await state.get_data()
-    message.answer(_('invalid type', locale=data[UserDataEnum.LANG]))
+    await message.answer(_('invalid type', locale=data[UserDataEnum.LANG]))
 
 
-def q1_handler(message: types.Message, state: FSMContext):
+async def q1_handler(message: types.Message, state: FSMContext):
     q1_ans = message.text
     async with state.proxy() as data:
         data.update({UserDataEnum.Q1: message.text})
