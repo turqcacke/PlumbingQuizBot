@@ -1,13 +1,10 @@
+from middlewares import _
 from aiogram import types
-from utils.misc import rate_limit
-from handlers import Commands
+from aiogram.dispatcher import FSMContext
+
+from states.user import UserDataConsts
 
 
-@rate_limit(5, Commands.help)
-async def bot_help(msg: types.Message):
-    text = [
-        'Список команд: ',
-        '/start - Начать диалог',
-        '/help - Получить справку'
-    ]
-    await msg.answer('\n'.join(text))
+async def help(msg: types.Message, state: FSMContext):
+    data = await state.get_data()
+    await msg.answer(_('help', locale=data[UserDataConsts.LANG]))

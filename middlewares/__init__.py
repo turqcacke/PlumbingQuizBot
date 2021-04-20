@@ -1,8 +1,8 @@
 from aiogram import Dispatcher
-from aiogram.contrib.middlewares.i18n import I18nMiddleware
+from .i18n import I18nWithSkip
 from data.config import I18_DOMAIN, LOCALES_DIR
 
-I18n = I18nMiddleware(domain=I18_DOMAIN, path=LOCALES_DIR)
+I18n = I18nWithSkip(domain=I18_DOMAIN, path=LOCALES_DIR)
 _ = I18n.gettext
 
 

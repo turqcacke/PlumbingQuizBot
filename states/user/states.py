@@ -14,7 +14,10 @@ class QuizStates(StatesGroup):
     q4 = State()
     q5 = State()
 
+    @classmethod
+    def get_all(cls):
+        return [cls.q1, cls.q2, cls.q3, cls.q4, cls.q5]
+
 
 class Q3(StatesGroup):
     add = State()
-

@@ -1,2 +1,3 @@
-from .help import bot_help
-from .start import bot_start
+from .help import help
+from .start_reset import start_reset
+from .changelang import changelang

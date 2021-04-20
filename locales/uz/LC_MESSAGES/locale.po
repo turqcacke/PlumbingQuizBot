@@ -20,77 +20,137 @@ msgstr ""
 "Generated-By: Babel 2.9.0\n"
 
 msgid "greetings"
-msgstr ""
+msgstr "Assalomu alykum, Tilni tanlang."
 
 msgid "help"
 msgstr ""
+"<b>So'rovnoma isitish radiatorlarini o'rnatadigan santexniklar uchun "
+"mo'ljallangan</b>.\n"
+"\n"
+"/changelang - tilni o'zgartirish.\n"
+"/reset - qayta boshlamoq."
 
-msgid "language {lang}"
+msgid "language"
+msgstr "Tilni tanlang."
+
+msgid "language {lang}."
 msgstr ""
+"Siz {lang} tilni tanladingiz. So'rov davomida tilni o'zgartirish "
+"uchun/changelang yozingQuyidagi savollarga javob bering. Boshidan "
+"boshlash uchun /reset."
 
 msgid "started"
 msgstr ""
+"Quyidagi savollarga javob bering. Boshidan boshlash uchun /reset.\n"
+"/changelang Tilni o'zgartirish uchun langni o'zgartiring."
 
 msgid "answer written"
-msgstr ""
+msgstr "Ishtirok etganingiz uchun tashakkur! Javobingiz yozib olindi!"
 
 msgid "confirm answer {answer}"
-msgstr ""
+msgstr "<b>Sizning javobingiz</b>: {answer}"
 
 msgid "confirm"
-msgstr ""
+msgstr "Tastiqlash"
 
 msgid "back"
-msgstr ""
+msgstr "Ortga"
 
 msgid "finished"
 msgstr ""
+"Siz allaqachon so'rovnomani yakunladingiz. Ishtirok etganingiz uchun "
+"tashakkur!"
 
 msgid "q1"
-msgstr ""
+msgstr "Yashash manzilingiz?"
+
+msgid "q1a1"
+msgstr "Toshkent shahri"
+
+msgid "q1a2"
+msgstr "Andijon viloyati"
+
+msgid "q1a3"
+msgstr "Buxoro viloyati"
+
+msgid "q1a4"
+msgstr "Fargʻona viloyati"
+
+msgid "q1a5"
+msgstr "Jizzax viloyati"
+
+msgid "q1a6"
+msgstr "Xorazm viloyati"
+
+msgid "q1a7"
+msgstr "Namangan viloyati"
+
+msgid "q1a8"
+msgstr "Navoiy viloyati"
+
+msgid "q1a9"
+msgstr "Qashqadaryo viloyati"
+
+msgid "q1a10"
+msgstr "Qoraqalpogʻiston Respublikasi"
+
+msgid "q1a11"
+msgstr "Samarqand viloyati"
+
+msgid "q1a12"
+msgstr "Sirdaryo viloyati"
+
+msgid "q1a13"
+msgstr "Surxondaryo viloyati"
+
+msgid "q1a14"
+msgstr "Toshkent viloyati"
 
 msgid "q2"
-msgstr ""
+msgstr "Siz asosan qaysi turdagi radiatorlar bilan ishlaysiz?"
 
 msgid "q2a1"
-msgstr ""
+msgstr "Panel (Панелли)"
 
 msgid "q2a2"
-msgstr ""
+msgstr "Seksiyali (Қовурғали)"
 
 msgid "q2a3"
-msgstr ""
+msgstr "Chuyan (Чўян)"
 
 msgid "q3"
-msgstr ""
+msgstr "Siz asosan qaysi uylarda ishlaysiz?"
 
 msgid "q3a1"
-msgstr ""
+msgstr "Hovlili uylarda (ховлида)"
 
 msgid "q3a2"
-msgstr ""
+msgstr "Ko'p qavatli honadonlarda (иккиламчи уй-жойлар)"
 
 msgid "q3a3"
-msgstr ""
+msgstr "Ko'p qavatli honadonlarda (бирламчи уй-жойлар/янги қурилган бинолар )"
 
 msgid "q3a4"
-msgstr ""
+msgstr "Hali foydalanishga topshirilmagan (qurilayotgan) ko'p qavatli uylarda"
 
 msgid "q3a5"
-msgstr ""
+msgstr "Boshqa"
 
 msgid "q4"
-msgstr ""
+msgstr "Oyiga o'rtacha qancha panelli radiator o'rnatasiz?"
 
 msgid "q5"
-msgstr ""
+msgstr "O'rtacha oyiga qancha radiator uchastkasini o'rnatasiz?"
 
 msgid "invalid length {max_length}"
-msgstr ""
+msgstr "Javobingiz juda uzun. Maksimal xabar uzunligi {max_length} ta belgiю"
 
 msgid "invalid input"
-msgstr ""
+msgstr "Iltimos, ro'yxatdan javobni tanlang!"
 
 msgid "invalid type"
-msgstr ""
+msgstr "Noto'g'ri xabar! Matningizni kiriting."
+
+msgid "nothing chosen"
+msgstr "Siz hech narsa tanlamadingiz! Yoki javobingizni tasdiqlamadiz."
 

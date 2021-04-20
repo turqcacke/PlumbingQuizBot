@@ -10,7 +10,7 @@ from data import config
 
 BOT = Bot(config.BOT_TOKEN, parse_mode=ParseMode.HTML, validate_token=True)
 STORAGE = MemoryStorage() if not config.USE_MONGO else MongoStorage(**config.mongo)
-DP = Dispatcher(BOT, storage=MemoryStorage())
+DP = Dispatcher(BOT, storage=STORAGE)
 
 
 class App:
@@ -67,11 +67,16 @@ class App:
 
         await handlers.setup(dp)
 
+    async def on_shutdown_polling(self, dp: Dispatcher):
+        await dp.storage.close()
+        await dp.storage.wait_closed()
+
     def start(self):
         if config.USE_WEBHOOK:
             web.run_app(self.init_webhook())
         else:
-            executor.start_polling(self.dp, skip_updates=True, on_startup=self.on_startup_polling)
+            executor.start_polling(self.dp, skip_updates=True,
+                                   on_startup=self.on_startup_polling, on_shutdown=self.on_shutdown_polling)
 
 
 if __name__ == '__main__':

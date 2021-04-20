@@ -1,15 +1,13 @@
 from enum import Enum, auto
 
 
-class UserDataEnum(Enum):
-    LANG = auto()
-    Q1 = auto()
-    Q2 = auto()
-    Q3 = auto()
-    Q4 = auto()
-    Q5 = auto()
-    LAST_STATE = auto()
-    LAST_QUESTION = auto()
-
-    def __str__(self):
-        return self.name
+class UserDataConsts:
+    LANG = 'lang'
+    Q1 = 'q1'
+    Q2 = 'q2'
+    Q3 = 'q3'
+    Q3_id = 'q3_id'
+    Q4 = 'q4'
+    Q5 = 'q5'
+    LAST_STATE = 'last_state'
+    LAST_QUESTION = 'last_question'
