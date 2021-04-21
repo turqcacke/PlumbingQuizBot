@@ -44,6 +44,6 @@ async def go_to_last_state(message: Message, state: FSMContext, data: dict):
         return
 
     await state.set_state(data[UserDataConsts.LAST_STATE])
-    await message.answer(_(f'q{last_question}'),
+    await message.answer(_(f'q{last_question}', locale=data[UserDataConsts.LANG]),
                          reply_markup=globals().get(f_name.format(last_question))(lang=data[UserDataConsts.LANG]) \
                              if f_name.format(last_question) in globals() else None)
