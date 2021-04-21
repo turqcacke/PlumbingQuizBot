@@ -20,137 +20,137 @@ msgstr ""
 "Generated-By: Babel 2.9.0\n"
 
 msgid "greetings"
-msgstr "Assalomu alykum, Tilni tanlang."
+msgstr "Ассалому алайкум, тилни танланг."
 
 msgid "help"
 msgstr ""
-"<b>So'rovnoma isitish radiatorlarini o'rnatadigan santexniklar uchun "
-"mo'ljallangan</b>.\n"
+"<b>Сўровнома иситиш радиаторлари ўрнатувчи сантехниклар "
+"учунмўлжанланган</b>.\n"
 "\n"
-"/changelang - tilni o'zgartirish.\n"
-"/reset - qayta boshlamoq."
+"/changelang - тилни ўзгартириш\n"
+"/reset - қайта бошлаш"
 
 msgid "language"
-msgstr "Tilni tanlang."
+msgstr "Тилни танланг"
 
-msgid "language {lang}."
+#, fuzzy
+msgid "language {lang}"
 msgstr ""
-"Siz {lang} tilni tanladingiz. So'rov davomida tilni o'zgartirish "
-"uchun/changelang yozingQuyidagi savollarga javob bering. Boshidan "
-"boshlash uchun /reset."
+"Сиз {lang} тилни танладингиз. Сўров давомида тилни ўзгартириш "
+"учун/changelang йозинг. Қуйидаги саволларга жавоб беринг. Бошиданбошлаш "
+"учун /reset."
 
 msgid "started"
 msgstr ""
-"Quyidagi savollarga javob bering. Boshidan boshlash uchun /reset.\n"
-"/changelang Tilni o'zgartirish uchun langni o'zgartiring."
+"Қуйидаги саволларга жавоб беринг. Бошидан бошлаш учун /reset.\n"
+"/changelang ни босинг тилни ўзгартириш учун."
 
 msgid "answer written"
-msgstr "Ishtirok etganingiz uchun tashakkur! Javobingiz yozib olindi!"
+msgstr "Иштирок этканингиз учун! Жавобингиз йозиб олинди!"
 
 msgid "confirm answer {answer}"
-msgstr "<b>Sizning javobingiz</b>: {answer}"
+msgstr "<b>Сизнинг жавобингиз</b>: {answer}"
 
 msgid "confirm"
-msgstr "Tastiqlash"
+msgstr "Тасдиқлаш"
 
 msgid "back"
-msgstr "Ortga"
+msgstr "Ортга"
 
 msgid "finished"
-msgstr ""
-"Siz allaqachon so'rovnomani yakunladingiz. Ishtirok etganingiz uchun "
-"tashakkur!"
+msgstr "Сиз соровнома якунладингиз. Иштирок этканингиз учун рахмат ташаккур!"
 
 msgid "q1"
-msgstr "Yashash manzilingiz?"
+msgstr "Яшаш манзилингиз?"
 
 msgid "q1a1"
-msgstr "Toshkent shahri"
+msgstr "Тошкент шахри"
 
 msgid "q1a2"
-msgstr "Andijon viloyati"
+msgstr "Андижон вилояти"
 
 msgid "q1a3"
-msgstr "Buxoro viloyati"
+msgstr "Бухоро вилояти"
 
 msgid "q1a4"
-msgstr "Fargʻona viloyati"
+msgstr "Фаргона вилояти"
 
 msgid "q1a5"
-msgstr "Jizzax viloyati"
+msgstr "Жиззах вилояти"
 
 msgid "q1a6"
-msgstr "Xorazm viloyati"
+msgstr "Хоразм вилояти"
 
 msgid "q1a7"
-msgstr "Namangan viloyati"
+msgstr "Наманган вилояти"
 
 msgid "q1a8"
-msgstr "Navoiy viloyati"
+msgstr "Навоий вилояти"
 
 msgid "q1a9"
-msgstr "Qashqadaryo viloyati"
+msgstr "Қашқадарйо вилояти"
 
 msgid "q1a10"
-msgstr "Qoraqalpogʻiston Respublikasi"
+msgstr "Қорақалпоқистон Республикаси"
 
 msgid "q1a11"
-msgstr "Samarqand viloyati"
+msgstr "Самарқканд вилояти"
 
 msgid "q1a12"
-msgstr "Sirdaryo viloyati"
+msgstr "Сирдарйо вилояти"
 
 msgid "q1a13"
-msgstr "Surxondaryo viloyati"
+msgstr "Сурхандарйо вилояти"
 
 msgid "q1a14"
-msgstr "Toshkent viloyati"
+msgstr "Тошкент вилояти"
 
 msgid "q2"
-msgstr "Siz asosan qaysi turdagi radiatorlar bilan ishlaysiz?"
+msgstr "Сиз асосан қайси турдаги иситиш радиаторлари билан ишлайсиз?"
 
 msgid "q2a1"
-msgstr "Panel (Панелли)"
+msgstr "Панелли"
 
 msgid "q2a2"
-msgstr "Seksiyali (Қовурғали)"
+msgstr "Секцияли (Қовурғали)"
 
 msgid "q2a3"
-msgstr "Chuyan (Чўян)"
+msgstr "Чўян"
 
 msgid "q3"
-msgstr "Siz asosan qaysi uylarda ishlaysiz?"
+msgstr ""
+"Қандай уйларда кўпроқ ишлар амалга оширасиз? (бир нечта жавобларни "
+"танлашингиз мумкин)"
 
 msgid "q3a1"
-msgstr "Hovlili uylarda (ховлида)"
+msgstr "Ховлили уйлар (ховлида)"
 
 msgid "q3a2"
-msgstr "Ko'p qavatli honadonlarda (иккиламчи уй-жойлар)"
+msgstr "Кўп қаватли хонадонлар (иккиламчи уй-жойлар)"
 
 msgid "q3a3"
-msgstr "Ko'p qavatli honadonlarda (бирламчи уй-жойлар/янги қурилган бинолар )"
+msgstr "Кўп қаватли хонадонларда (бирламчи уй-жойлар/янги қурилган бинолар )"
 
 msgid "q3a4"
-msgstr "Hali foydalanishga topshirilmagan (qurilayotgan) ko'p qavatli uylarda"
+msgstr "Хали фойдаланишга топширилинмаган кўпқаватли хонадонлар (қурилаётган)"
 
 msgid "q3a5"
-msgstr "Boshqa"
+msgstr "Бошқа"
 
 msgid "q4"
-msgstr "Oyiga o'rtacha qancha panelli radiator o'rnatasiz?"
+msgstr "Ўртача бир ойда нечита панелли иситиш радиаторидан ўрнатасиз?"
 
 msgid "q5"
-msgstr "O'rtacha oyiga qancha radiator uchastkasini o'rnatasiz?"
+msgstr "Ўртача бир ойда нечита секция (қовурға)ли иситиш радиаторидан ўрнатасиз?"
 
 msgid "invalid length {max_length}"
-msgstr "Javobingiz juda uzun. Maksimal xabar uzunligi {max_length} ta belgiю"
+msgstr "Жавобингиз жуда узун. Максимал хабар узунлиги {max_length} та белги"
 
 msgid "invalid input"
-msgstr "Iltimos, ro'yxatdan javobni tanlang!"
+msgstr "Илтимос, ройхатдан жавобни танланг!"
 
 msgid "invalid type"
-msgstr "Noto'g'ri xabar! Matningizni kiriting."
+msgstr "Нотогри хабар! Матнингизни киритинг."
 
 msgid "nothing chosen"
-msgstr "Siz hech narsa tanlamadingiz! Yoki javobingizni tasdiqlamadiz."
-
+msgstr "Сиз хеч нарса танламадингиз!"
