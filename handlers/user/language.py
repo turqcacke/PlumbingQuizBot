@@ -12,12 +12,12 @@ async def invalid_language(message: types.Message, state: FSMContext):
 
 async def language_choose(message: types.Message, state: FSMContext):
     lang = message.text
-    data = await state.get_data()
 
     await message.answer(_('language {lang}', locale=lang).format(lang=lang))
-    await state.update_data({UserDataConsts.LANG: lang})
+    async with state.proxy() as data:
+        data[UserDataConsts.LANG] = lang
 
-    if data:
+    if len(data) > 1:
         await go_to_last_question(message, state, data)
         return
 

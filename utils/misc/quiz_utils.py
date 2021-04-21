@@ -15,7 +15,7 @@ generate_q5_ans = generate_back
 async def go_to_last_question(message: Message, state: FSMContext, data: dict):
     last_question = data[UserDataConsts.LAST_QUESTION][-1]
     await state.set_state(data[UserDataConsts.LAST_QUESTION])
-    await message.answer(_(f'q{last_question}'),
+    await message.answer(_(f'q{last_question}', locale=data[UserDataConsts.LANG]),
                          reply_markup=globals().get(f_name.format(last_question))(lang=data[UserDataConsts.LANG]) \
                              if f_name.format(last_question) in globals() else None)
 
