@@ -6,7 +6,7 @@ from keyboards.default import generate_q1_ans, generate_q2_ans, generate_back
 from utils.misc.polls import stop_poll
 from bot import BOT
 from utils.misc.excel import write_to_exel
-
+from loguru import logger
 
 f_name = 'generate_q{}_ans'
 generate_q4_ans = generate_back
@@ -24,8 +24,16 @@ async def confirm_handler(message: Message, state: FSMContext):
         await GeneralStates.finished.set()
 
         try:
-
-            write_to_exel()
+            write_to_exel({
+                'username': '@' + message.from_user.username if message.from_user.username else message.from_user.full_name,
+                '1': data[UserDataConsts.Q1],
+                '2': data[UserDataConsts.Q2],
+                '3': '|'.join(i for i in data[UserDataConsts.Q3]),
+                '4': data[UserDataConsts.Q4],
+                '5': data[UserDataConsts.Q5]
+            })
+        except Exception as e:
+            logger.error(e)
 
         await message.answer(_('answer written', locale=data[UserDataConsts.LANG]), reply_markup=ReplyKeyboardRemove())
         return
@@ -33,7 +41,7 @@ async def confirm_handler(message: Message, state: FSMContext):
     if last_question == QuizStates.q2.state[-1]:
         await GeneralStates.confirm_answer.set()
         await BOT.send_poll(chat_id=message.chat.id,
-                            question=_(f'q{next_question}'),
+                            question=_(f'q{next_question}', locale=data[UserDataConsts.LANG]),
                             options=[_(f'q3a1', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a2', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a3', locale=data[UserDataConsts.LANG]),
@@ -56,6 +64,6 @@ async def confirm_handler(message: Message, state: FSMContext):
 
     await state.update_data({UserDataConsts.LAST_QUESTION: next_state.state})
     await state.set_state(next_state)
-    await message.answer(_(f'q{next_question}'),
+    await message.answer(_(f'q{next_question}', locale=data[UserDataConsts.LANG]),
                          reply_markup=globals().get(f_name.format(next_question))(lang=data[UserDataConsts.LANG]) \
                              if f_name.format(next_question) in globals() else None)

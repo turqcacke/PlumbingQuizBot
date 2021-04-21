@@ -24,7 +24,7 @@ async def go_to_last_state(message: Message, state: FSMContext, data: dict):
     last_question = int(data[UserDataConsts.LAST_STATE][-1])
     await state.update_data({UserDataConsts.LAST_STATE: getattr(QuizStates,
                                                                 f'q{last_question - 1}').state
-                                                        if last_question > 1 else GeneralStates.language.state})
+                            if last_question > 1 else GeneralStates.language.state})
     await state.update_data({UserDataConsts.LAST_QUESTION: data[UserDataConsts.LAST_STATE]})
 
     if data[UserDataConsts.LAST_STATE] == QuizStates.q3.state:
@@ -32,7 +32,7 @@ async def go_to_last_state(message: Message, state: FSMContext, data: dict):
         await state.update_data({UserDataConsts.Q3: None})
         await state.update_data({UserDataConsts.Q3_id: message.message_id})
         await BOT.send_poll(chat_id=message.chat.id,
-                            question=_(f'q{last_question}'),
+                            question=_(f'q{last_question}', locale=data[UserDataConsts.LANG]),
                             options=[_(f'q3a1', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a2', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a3', locale=data[UserDataConsts.LANG]),

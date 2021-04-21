@@ -140,3 +140,4 @@ dmypy.json
 .idea/vcs.xml
 .idea
 test.py
+*.xlsx

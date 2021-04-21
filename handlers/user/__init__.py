@@ -9,10 +9,10 @@ from handlers.user.confirm import confirm_handler
 from handlers.user.back import back_handler
 from states.user import GeneralStates, QuizStates
 from middlewares import _
-from handlers.user.commands.test import test
+from handlers.user.commands.results import results
 from handlers.user.polls.q3_poll_naswer import q3_poll_answer
 from data.consts import MAX_LENGTH
-from utils.misc.locales import get_all_locales
+from utils.misc.locales import get_all_locales, _locales
 
 
 def get_q_ans(q_number, limit=15):
@@ -27,14 +27,16 @@ def setup(dp: Dispatcher):
     """Setup handlers for bot Dispatcher"""
     dp.register_poll_answer_handler(q3_poll_answer)
     dp.register_message_handler(start_reset, CommandStart(), state='*')
-    dp.register_message_handler(test, commands=['test'], state='*')
+    dp.register_message_handler(results, commands=['results'], state='*')
 
     dp.register_message_handler(help,
                                 CommandHelp(),
                                 state=[GeneralStates.confirm_answer] + QuizStates.get_all())
     dp.register_message_handler(start_reset,
                                 commands=['reset'],
-                                state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all())
+                                # state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all()
+                                state='*'
+                                )
     dp.register_message_handler(changelang,
                                 commands=['changelang'],
                                 state=[GeneralStates.confirm_answer] + QuizStates.get_all())
@@ -75,3 +77,5 @@ def setup(dp: Dispatcher):
                                 state=[GeneralStates.confirm_answer,
                                        QuizStates.q1,
                                        QuizStates.q2])
+    dp.register_message_handler(lambda msg: None,
+                                state='*')

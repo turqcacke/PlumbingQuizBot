@@ -9,6 +9,7 @@ class Commands(Enum):
     help = 'help'
     reset = 'reset'
     changelang = 'changelang'
+    results = 'results'
 
     def __str__(self):
         return '/' + self.value
@@ -20,5 +21,6 @@ async def setup_commands(dp: Dispatcher):
         types.BotCommand(str(Commands.start), "Запустить бота"),
         types.BotCommand(str(Commands.help), "Помощь"),
         types.BotCommand(str(Commands.reset), "Сначала"),
-        types.BotCommand(str(Commands.changelang), "Сменнить язык")
+        types.BotCommand(str(Commands.changelang), "Сменнить язык"),
+        types.BotCommand(str(Commands.results), "Получить результаты если допустимая группа")
     ])

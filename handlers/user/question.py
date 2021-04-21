@@ -29,7 +29,8 @@ async def question_handler(message: types.Message, state: FSMContext):
         data.update({getattr(UserDataConsts, f'Q{cur_question}'): message.text})
         data.update({UserDataConsts.LAST_STATE: await state.get_state()})
     await message.answer(_(f'q{cur_question}',
-                           locale=data[UserDataConsts.LANG]) + '\n' + _('confirm answer {answer}')
+                           locale=data[UserDataConsts.LANG]) + '\n' + _('confirm answer {answer}',
+                                                                        locale=data[UserDataConsts.LANG])
                          .format(answer=ans),
                          reply_markup=generate_confirm(lang=data[UserDataConsts.LANG]))
     await GeneralStates.confirm_answer.set()
