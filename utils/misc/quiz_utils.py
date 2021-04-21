@@ -40,7 +40,7 @@ async def go_to_last_state(message: Message, state: FSMContext, data: dict):
                                      _(f'q3a5', locale=data[UserDataConsts.LANG])],
                             allows_multiple_answers=True,
                             is_anonymous=False,
-                            reply_markup=generate_confirm(lang=data[UserDataConsts.LANG]))
+                            reply_markup=generate_back(lang=data[UserDataConsts.LANG]))
         return
 
     await state.set_state(data[UserDataConsts.LAST_STATE])

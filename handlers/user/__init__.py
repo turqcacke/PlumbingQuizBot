@@ -55,19 +55,19 @@ def setup(dp: Dispatcher):
     dp.register_message_handler(back_handler,
                                 Text(equals=get_all_locales('back')),
                                 state=[GeneralStates.confirm_answer] + QuizStates.get_all())
-    dp.register_message_handler(confirm_handler,
-                                Text(equals=get_all_locales('confirm')),
-                                state=GeneralStates.confirm_answer)
+    # dp.register_message_handler(confirm_handler,
+    #                             Text(equals=get_all_locales('confirm')),
+    #                             state=GeneralStates.confirm_answer)
 
-    dp.register_message_handler(question_handler,
+    dp.register_message_handler(confirm_handler, #question_handler
                                 Text(equals=get_q_ans(1, 15)),
                                 content_types=ContentTypes.TEXT,
                                 state=QuizStates.q1)
-    dp.register_message_handler(question_handler,
+    dp.register_message_handler(confirm_handler,
                                 Text(equals=get_q_ans(2, 5)),
                                 content_types=ContentTypes.TEXT,
                                 state=QuizStates.q2)
-    dp.register_message_handler(question_handler,
+    dp.register_message_handler(confirm_handler,
                                 lambda msg: len(msg.text) < MAX_LENGTH,
                                 content_types=ContentTypes.TEXT,
                                 state=[QuizStates.q4, QuizStates.q5])
