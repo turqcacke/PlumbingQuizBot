@@ -23,6 +23,10 @@ def get_q_ans(q_number, limit=15):
     return words
 
 
+async def receiver(*args):
+    pass
+
+
 def setup(dp: Dispatcher):
     """Setup handlers for bot Dispatcher"""
     dp.register_poll_answer_handler(q3_poll_answer)
@@ -34,8 +38,8 @@ def setup(dp: Dispatcher):
                                 state=[GeneralStates.confirm_answer] + QuizStates.get_all())
     dp.register_message_handler(start_reset,
                                 commands=['reset'],
-                                state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all()
-                                # state='*'
+                                # state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all()
+                                state='*'
                                 )
     dp.register_message_handler(changelang,
                                 commands=['changelang'],
@@ -77,5 +81,5 @@ def setup(dp: Dispatcher):
                                 state=[GeneralStates.confirm_answer,
                                        QuizStates.q1,
                                        QuizStates.q2])
-    dp.register_message_handler(lambda msg: None,
+    dp.register_message_handler(receiver,
                                 state='*')

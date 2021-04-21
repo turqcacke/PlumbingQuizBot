@@ -4,7 +4,7 @@ from states.user import UserDataConsts, GeneralStates, QuizStates
 from middlewares import _
 from keyboards.default import generate_lang_keyboard
 from utils.misc.polls import stop_poll
-from utils.misc.quiz_utils import go_to_last_question, go_to_last_state
+from utils.misc.quiz_utils import go_to_last_state
 
 
 async def back_handler(message: types.Message, state: FSMContext):
