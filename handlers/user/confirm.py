@@ -5,6 +5,8 @@ from states.user import QuizStates, UserDataConsts, GeneralStates
 from keyboards.default import generate_q1_ans, generate_q2_ans, generate_back
 from utils.misc.polls import stop_poll
 from bot import BOT
+from utils.misc.excel import write_to_exel
+
 
 f_name = 'generate_q{}_ans'
 generate_q4_ans = generate_back
@@ -17,9 +19,14 @@ async def confirm_handler(message: Message, state: FSMContext):
     next_question = int(last_question) + 1
 
     try:
-        next_state = QuizStates.__getattribute__(QuizStates, f'q{next_question}')
+        next_state = getattr(QuizStates, f'q{next_question}')
     except AttributeError:
         await GeneralStates.finished.set()
+
+        try:
+
+            write_to_exel()
+
         await message.answer(_('answer written', locale=data[UserDataConsts.LANG]), reply_markup=ReplyKeyboardRemove())
         return
 
@@ -31,7 +38,7 @@ async def confirm_handler(message: Message, state: FSMContext):
                                      _(f'q3a2', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a3', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a4', locale=data[UserDataConsts.LANG]),
-                                     _(f'q3a4', locale=data[UserDataConsts.LANG])],
+                                     _(f'q3a5', locale=data[UserDataConsts.LANG])],
                             allows_multiple_answers=True,
                             is_anonymous=False)
         async with state.proxy() as data:

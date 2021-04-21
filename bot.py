@@ -34,9 +34,9 @@ class App:
         await app_bot.close()
 
     async def init_webhook(self) -> web.Application:
-        from utils.misc import logging
+        from utils.misc import log_config
         import web_handlers
-        logging.setup()
+        log_config.setup()
         scheduler = await aiojobs.create_scheduler()
         app = web.Application()
         sub_apps: List[Tuple[str, web.Application]] = [
@@ -60,8 +60,8 @@ class App:
         import handlers
         import filters
         import middlewares
-        from utils.misc import logging
-        logging.setup()
+        from utils.misc import log_config
+        log_config.setup()
         middlewares.setup(dp)
         filters.setup(dp)
 

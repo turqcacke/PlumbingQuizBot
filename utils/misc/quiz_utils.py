@@ -22,8 +22,8 @@ async def go_to_last_question(message: Message, state: FSMContext, data: dict):
 
 async def go_to_last_state(message: Message, state: FSMContext, data: dict):
     last_question = int(data[UserDataConsts.LAST_STATE][-1])
-    await state.update_data({UserDataConsts.LAST_STATE: QuizStates.__getattribute__(QuizStates,
-                                                                                    f'q{last_question - 1}').state
+    await state.update_data({UserDataConsts.LAST_STATE: getattr(QuizStates,
+                                                                f'q{last_question - 1}').state
                                                         if last_question > 1 else GeneralStates.language.state})
     await state.update_data({UserDataConsts.LAST_QUESTION: data[UserDataConsts.LAST_STATE]})
 
@@ -37,7 +37,7 @@ async def go_to_last_state(message: Message, state: FSMContext, data: dict):
                                      _(f'q3a2', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a3', locale=data[UserDataConsts.LANG]),
                                      _(f'q3a4', locale=data[UserDataConsts.LANG]),
-                                     _(f'q3a4', locale=data[UserDataConsts.LANG])],
+                                     _(f'q3a5', locale=data[UserDataConsts.LANG])],
                             allows_multiple_answers=True,
                             is_anonymous=False,
                             reply_markup=generate_confirm(lang=generate_back(lang=data[UserDataConsts.LANG])))

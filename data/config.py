@@ -16,6 +16,8 @@ I18_DOMAIN = 'locale'
 LOCALES_DIR = Path(__file__).parent.parent / 'locales'
 
 ADMINS = env.list('ADMINS')
+ALLOWED_GROUPS = env.list('ALLOWED_GROUPS')
+TABLES_FOLDER = env.str('TABLES_FOLDER')
 
 ip = {
     'db': '',

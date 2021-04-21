@@ -4,22 +4,15 @@ from aiogram.dispatcher.filters import CommandStart, CommandHelp
 from aiogram.dispatcher.filters import Text
 from handlers.user.commands import help, start_reset, changelang
 from handlers.user.language import language_choose, invalid_language
-from handlers.user.question_handler import question_handler, invalid_type, invalid_length, invalid_input
+from handlers.user.question import question_handler, invalid_type, invalid_length, invalid_input
 from handlers.user.confirm import confirm_handler
 from handlers.user.back import back_handler
-from keyboards.default.language import _locales
 from states.user import GeneralStates, QuizStates
 from middlewares import _
 from handlers.user.commands.test import test
 from handlers.user.polls.q3_poll_naswer import q3_poll_answer
 from data.consts import MAX_LENGTH
-
-
-def get_all_locales(msgid: str):
-    words = list()
-    for locale in _locales:
-        words.append(_(msgid, locale=locale))
-    return words
+from utils.misc.locales import get_all_locales
 
 
 def get_q_ans(q_number, limit=15):

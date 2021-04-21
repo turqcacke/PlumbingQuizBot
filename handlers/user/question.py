@@ -26,7 +26,7 @@ async def question_handler(message: types.Message, state: FSMContext):
     ans = message.text
     cur_question = (await state.get_state())[-1]
     async with state.proxy() as data:
-        data.update({UserDataConsts.__getattribute__(UserDataConsts, f'Q{cur_question}'): message.text})
+        data.update({getattr(UserDataConsts, f'Q{cur_question}'): message.text})
         data.update({UserDataConsts.LAST_STATE: await state.get_state()})
     await message.answer(_(f'q{cur_question}',
                            locale=data[UserDataConsts.LANG]) + '\n' + _('confirm answer {answer}')
