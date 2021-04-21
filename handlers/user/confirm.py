@@ -65,7 +65,6 @@ async def confirm_handler(message: Message, state: FSMContext):
         return
 
     # elif last_question == QuizStates.q3.state[-1]:
-    #     logger.info(data)
     #     if UserDataConsts.Q3 not in data or not data[UserDataConsts.Q3]:
     #         await message.answer(_('nothing chosen', locale=data[UserDataConsts.LANG]))
     #         return
