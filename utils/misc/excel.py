@@ -70,7 +70,3 @@ def write_to_exel(data: dict):
         cell = ws.cell(row=last_row + 1, column=i, value=data.get(keys[i - 1]))
         cell.alignment = _centred
     wb.save(filename)
-
-
-if __name__ == '__main__':
-    write_to_exel({'name': 'pavel'})
