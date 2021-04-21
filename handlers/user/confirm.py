@@ -30,7 +30,8 @@ async def confirm_handler(message: Message, state: FSMContext):
                 '2': data[UserDataConsts.Q2],
                 '3': '|'.join(i for i in data[UserDataConsts.Q3]),
                 '4': data[UserDataConsts.Q4],
-                '5': data[UserDataConsts.Q5]
+                '5': data[UserDataConsts.Q5],
+                'ru|uz': data[UserDataConsts.LANG]
             })
         except Exception as e:
             logger.error(e)

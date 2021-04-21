@@ -34,8 +34,8 @@ def setup(dp: Dispatcher):
                                 state=[GeneralStates.confirm_answer] + QuizStates.get_all())
     dp.register_message_handler(start_reset,
                                 commands=['reset'],
-                                # state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all()
-                                state='*'
+                                state=[GeneralStates.confirm_answer, GeneralStates.language] + QuizStates.get_all()
+                                # state='*'
                                 )
     dp.register_message_handler(changelang,
                                 commands=['changelang'],
