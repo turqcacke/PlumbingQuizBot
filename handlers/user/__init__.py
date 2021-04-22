@@ -30,7 +30,7 @@ async def receiver(*args):
 def setup(dp: Dispatcher):
     """Setup handlers for bot Dispatcher"""
     dp.register_poll_answer_handler(q3_poll_answer)
-    dp.register_message_handler(start_reset, CommandStart(), state='*')
+    dp.register_message_handler(start_reset, CommandStart())
     dp.register_message_handler(results, commands=['results'], state='*')
 
     dp.register_message_handler(help,
