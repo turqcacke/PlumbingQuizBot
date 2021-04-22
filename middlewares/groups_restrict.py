@@ -7,6 +7,7 @@ class RestrictGroups(BaseMiddleware):
     async def on_process_message(self, message: types.Message, data: dict):
         handler = current_handler.get()
         allowed_ids = getattr(handler, 'allowed_ids', None)
-        if allowed_ids and str(message.chat.id) not in allowed_ids:
+        if allowed_ids and str(message.chat.id) not in allowed_ids or \
+                not allowed_ids and message.chat.id != message.from_user.id:
             raise CancelHandler
         return
